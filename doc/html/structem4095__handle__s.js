@@ -1,0 +1,26 @@
+var structem4095__handle__s =
+[
+    [ "debug_print", "structem4095__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b", null ],
+    [ "decode", "structem4095__handle__s.html#a99f400ef0721f1036b8c5819e75be3d4", null ],
+    [ "decode_len", "structem4095__handle__s.html#aeb2b9296292e67a9da289387bbcad1ab", null ],
+    [ "delay_ms", "structem4095__handle__s.html#a406c9433252b7366de417b7a60915c81", null ],
+    [ "demod_gpio_deinit", "structem4095__handle__s.html#adf7ae6aeae9ee5563f5b0508aa5c2dcf", null ],
+    [ "demod_gpio_init", "structem4095__handle__s.html#a43228aeb945ee2f593f4f9bc286594d1", null ],
+    [ "demod_gpio_read", "structem4095__handle__s.html#aebe8764de50dd9def6dcbc57c463f3f3", null ],
+    [ "div", "structem4095__handle__s.html#abe79e68a56ca7dab755d2cd5e2f6cffc", null ],
+    [ "div_len", "structem4095__handle__s.html#a3d86124a3a18ab30d3879039e5966692", null ],
+    [ "inited", "structem4095__handle__s.html#a19bedf28d2b9748f6a62d9ae93f4e68f", null ],
+    [ "last_bit", "structem4095__handle__s.html#aa43d012d37cc78f93e1757643e7ec30a", null ],
+    [ "last_time", "structem4095__handle__s.html#a1fe22b81722fa0218963a5afeac584be", null ],
+    [ "len", "structem4095__handle__s.html#a8aed22e2c7b283705ec82e0120515618", null ],
+    [ "mod_gpio_deinit", "structem4095__handle__s.html#aecef6a59f810f0310e61ebcea7025299", null ],
+    [ "mod_gpio_init", "structem4095__handle__s.html#af99aa353df343b366324f246d2ca0d85", null ],
+    [ "mod_gpio_write", "structem4095__handle__s.html#ad98a3bff463e6ccc367123acf5060698", null ],
+    [ "mode", "structem4095__handle__s.html#a37e90f5e3bd99fac2021fb3a326607d4", null ],
+    [ "receive_callback", "structem4095__handle__s.html#ad3f971fff5c456bca652c36de6424282", null ],
+    [ "shd_gpio_deinit", "structem4095__handle__s.html#a8df0c7c3d004acc57cf520c6276d4410", null ],
+    [ "shd_gpio_init", "structem4095__handle__s.html#a174063288a43786b40eaeb76db5313fd", null ],
+    [ "shd_gpio_write", "structem4095__handle__s.html#a90b570fc746272afb8493fff4befdcd8", null ],
+    [ "start_flag", "structem4095__handle__s.html#af26731ad2b39b91b386db80610dccab5", null ],
+    [ "timestamp_read", "structem4095__handle__s.html#aec29ec19791ccb0302615da61ff84e60", null ]
+];
