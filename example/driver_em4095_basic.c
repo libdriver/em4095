@@ -159,6 +159,28 @@ uint8_t em4095_basic_init(void (*callback)(em4095_mode_t mode, em4095_decode_t *
 }
 
 /**
+ * @brief     basic example set clock div
+ * @param[in] clock_div is the set clock div
+ * @return    status code
+ *            - 0 success
+ *            - 1 set div failed
+ * @note      none
+ */
+uint8_t em4095_basic_set_div(uint32_t clock_div)
+{
+    uint8_t res;
+    
+    /* set div */
+    res = em4095_set_div(&gs_handle, clock_div);
+    if (res != 0)
+    {
+        return 1;
+    }
+    
+    return 0;
+}
+
+/**
  * @brief      basic example read
  * @param[out] *buf points to a data buffer
  * @param[in]  len is the read length

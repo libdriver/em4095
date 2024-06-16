@@ -106,6 +106,16 @@ uint8_t em4095_basic_read(uint8_t *buf, uint16_t len);
 uint8_t em4095_basic_write(uint8_t *buf, uint16_t len);
 
 /**
+ * @brief     basic example set clock div
+ * @param[in] clock_div is the set clock div
+ * @return    status code
+ *            - 0 success
+ *            - 1 set div failed
+ * @note      none
+ */
+uint8_t em4095_basic_set_div(uint32_t clock_div);
+
+/**
  * @}
  */
 
