@@ -190,130 +190,144 @@ $(document).ready(function(){initNavTree('driver__em4095__basic_8c_source.html',
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="group__em4095__example__driver.html#gaeb64be9ec213ff5b31a8466a91bfd4d7">  170</a></span>&#160;uint8_t <a class="code" href="group__em4095__example__driver.html#gaeb64be9ec213ff5b31a8466a91bfd4d7">em4095_basic_read</a>(uint8_t *buf, uint16_t len)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    uint16_t l;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    uint32_t timeout;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">/* init 0 */</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    gs_flag = 0;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">/* read */</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#ga87fb73f80fe30622c215cd7701c58fc2">em4095_read</a>(&amp;gs_handle, len);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="comment">/* power on */</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#gac718ed23935fdbda0afd2d1e9cf96172">em4095_power_on</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">/* set timeout 5s */</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    timeout = 500;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">/* check timeout */</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">while</span> (timeout != 0)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="comment">/* check the flag */</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">if</span> (gs_flag != 0)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">/* timeout -- */</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        timeout--;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="group__em4095__example__driver.html#gaabe852653f71c813a61ea96b330bfec6">  169</a></span>&#160;uint8_t <a class="code" href="group__em4095__example__driver.html#gaabe852653f71c813a61ea96b330bfec6">em4095_basic_set_div</a>(uint32_t clock_div)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    uint8_t res;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">/* set div */</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#ga8c33291737e6f0b25fe3a24913336742">em4095_set_div</a>(&amp;gs_handle, clock_div);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="group__em4095__example__driver.html#gaeb64be9ec213ff5b31a8466a91bfd4d7">  192</a></span>&#160;uint8_t <a class="code" href="group__em4095__example__driver.html#gaeb64be9ec213ff5b31a8466a91bfd4d7">em4095_basic_read</a>(uint8_t *buf, uint16_t len)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    uint8_t res;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    uint16_t l;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    uint32_t timeout;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">/* init 0 */</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    gs_flag = 0;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment">/* read */</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#ga87fb73f80fe30622c215cd7701c58fc2">em4095_read</a>(&amp;gs_handle, len);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="comment">/* delay 10ms */</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="group__em4095__interface__driver.html#ga6da1ae9b91cd1ce841613d671bbcb8ce">em4095_interface_delay_ms</a>(10);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">/* check the timeout */</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">if</span> (timeout == 0)</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">/* power on */</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#gac718ed23935fdbda0afd2d1e9cf96172">em4095_power_on</a>(&amp;gs_handle);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">/* set timeout 5s */</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    timeout = 500;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">/* copy to buffer */</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#ga47944d0a227230e0f631cf57cfbc0fa4">em4095_copy_decode_buffer</a>(&amp;gs_handle, buf, &amp;l);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">/* check length */</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> (l != len)</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">/* check timeout */</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">while</span> (timeout != 0)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="comment">/* check the flag */</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span> (gs_flag != 0)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="comment">/* timeout -- */</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        timeout--;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="comment">/* delay 10ms */</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="group__em4095__interface__driver.html#ga6da1ae9b91cd1ce841613d671bbcb8ce">em4095_interface_delay_ms</a>(10);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="group__em4095__example__driver.html#ga641e24b0c15e7022522dab614d9a24f7">  243</a></span>&#160;uint8_t <a class="code" href="group__em4095__example__driver.html#ga641e24b0c15e7022522dab614d9a24f7">em4095_basic_write</a>(uint8_t *buf, uint16_t len)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    uint32_t timeout;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">/* init 0 */</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    gs_flag = 0;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">/* write */</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#ga7070a21730cbc0e7ca59905f89d95664">em4095_write</a>(&amp;gs_handle, buf, len);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">/* power on */</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#gac718ed23935fdbda0afd2d1e9cf96172">em4095_power_on</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">/* set timeout 5s */</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    timeout = 500;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">/* check timeout */</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">while</span> (timeout != 0)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="comment">/* check the flag */</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">if</span> (gs_flag != 0)</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">/* timeout -- */</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        timeout--;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="comment">/* check the timeout */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">if</span> (timeout == 0)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">/* copy to buffer */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#ga47944d0a227230e0f631cf57cfbc0fa4">em4095_copy_decode_buffer</a>(&amp;gs_handle, buf, &amp;l);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">/* check length */</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">if</span> (l != len)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="group__em4095__example__driver.html#ga641e24b0c15e7022522dab614d9a24f7">  265</a></span>&#160;uint8_t <a class="code" href="group__em4095__example__driver.html#ga641e24b0c15e7022522dab614d9a24f7">em4095_basic_write</a>(uint8_t *buf, uint16_t len)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    uint8_t res;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    uint32_t timeout;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">/* init 0 */</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    gs_flag = 0;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">/* write */</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#ga7070a21730cbc0e7ca59905f89d95664">em4095_write</a>(&amp;gs_handle, buf, len);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="comment">/* delay 10ms */</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <a class="code" href="group__em4095__interface__driver.html#ga6da1ae9b91cd1ce841613d671bbcb8ce">em4095_interface_delay_ms</a>(10);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">/* check the timeout */</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> (timeout == 0)</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="comment">/* power on */</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    res = <a class="code" href="group__em4095__basic__driver.html#gac718ed23935fdbda0afd2d1e9cf96172">em4095_power_on</a>(&amp;gs_handle);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">/* set timeout 5s */</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    timeout = 500;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="group__em4095__example__driver.html#ga900a43e637b7af83a7443529009525b7">  300</a></span>&#160;uint8_t <a class="code" href="group__em4095__example__driver.html#ga900a43e637b7af83a7443529009525b7">em4095_basic_deinit</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;{</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__em4095__basic__driver.html#gae43bbb72fe4e5d7539fc6398569a29ac">em4095_deinit</a>(&amp;gs_handle) != 0)</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    gs_callback = NULL;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">/* check timeout */</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">while</span> (timeout != 0)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="comment">/* check the flag */</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">if</span> (gs_flag != 0)</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">/* timeout -- */</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        timeout--;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="comment">/* delay 10ms */</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <a class="code" href="group__em4095__interface__driver.html#ga6da1ae9b91cd1ce841613d671bbcb8ce">em4095_interface_delay_ms</a>(10);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">/* check the timeout */</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">if</span> (timeout == 0)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="group__em4095__example__driver.html#ga900a43e637b7af83a7443529009525b7">  322</a></span>&#160;uint8_t <a class="code" href="group__em4095__example__driver.html#ga900a43e637b7af83a7443529009525b7">em4095_basic_deinit</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__em4095__basic__driver.html#gae43bbb72fe4e5d7539fc6398569a29ac">em4095_deinit</a>(&amp;gs_handle) != 0)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    gs_callback = NULL;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
 <div class="ttc" id="adriver__em4095__basic_8h_html"><div class="ttname"><a href="driver__em4095__basic_8h.html">driver_em4095_basic.h</a></div><div class="ttdoc">driver em4095 basic header file</div></div>
 <div class="ttc" id="agroup__em4095__basic__driver_html_ga04bb2a1c8097cf2a3dba83f0f155cf77"><div class="ttname"><a href="group__em4095__basic__driver.html#ga04bb2a1c8097cf2a3dba83f0f155cf77">em4095_init</a></div><div class="ttdeci">uint8_t em4095_init(em4095_handle_t *handle)</div><div class="ttdoc">initialize the chip</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095_8c_source.html#l00296">driver_em4095.c:296</a></div></div>
 <div class="ttc" id="agroup__em4095__basic__driver_html_ga464116513410db348c9587275743c573"><div class="ttname"><a href="group__em4095__basic__driver.html#ga464116513410db348c9587275743c573">em4095_irq_handler</a></div><div class="ttdeci">uint8_t em4095_irq_handler(em4095_handle_t *handle)</div><div class="ttdoc">irq handler</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095_8c_source.html#l00163">driver_em4095.c:163</a></div></div>
@@ -328,11 +342,12 @@ $(document).ready(function(){initNavTree('driver__em4095__basic_8c_source.html',
 <div class="ttc" id="agroup__em4095__basic__driver_html_ggadb2f247343696916289199d85b30e5dba564098d085e669601a6ab7f2894cafbe"><div class="ttname"><a href="group__em4095__basic__driver.html#ggadb2f247343696916289199d85b30e5dba564098d085e669601a6ab7f2894cafbe">EM4095_MODE_WRITE</a></div><div class="ttdeci">@ EM4095_MODE_WRITE</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095_8h_source.html#l00073">driver_em4095.h:73</a></div></div>
 <div class="ttc" id="agroup__em4095__basic__driver_html_ggadb2f247343696916289199d85b30e5dbada00ae40066a138c81c7d073230d6e1a"><div class="ttname"><a href="group__em4095__basic__driver.html#ggadb2f247343696916289199d85b30e5dbada00ae40066a138c81c7d073230d6e1a">EM4095_MODE_READ</a></div><div class="ttdeci">@ EM4095_MODE_READ</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095_8h_source.html#l00072">driver_em4095.h:72</a></div></div>
 <div class="ttc" id="agroup__em4095__example__driver_html_ga61c0795b9ab00e9e0ae239043af4a092"><div class="ttname"><a href="group__em4095__example__driver.html#ga61c0795b9ab00e9e0ae239043af4a092">em4095_basic_irq_handler</a></div><div class="ttdeci">uint8_t em4095_basic_irq_handler(void)</div><div class="ttdoc">basic irq</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00090">driver_em4095_basic.c:90</a></div></div>
-<div class="ttc" id="agroup__em4095__example__driver_html_ga641e24b0c15e7022522dab614d9a24f7"><div class="ttname"><a href="group__em4095__example__driver.html#ga641e24b0c15e7022522dab614d9a24f7">em4095_basic_write</a></div><div class="ttdeci">uint8_t em4095_basic_write(uint8_t *buf, uint16_t len)</div><div class="ttdoc">basic example write</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00243">driver_em4095_basic.c:243</a></div></div>
+<div class="ttc" id="agroup__em4095__example__driver_html_ga641e24b0c15e7022522dab614d9a24f7"><div class="ttname"><a href="group__em4095__example__driver.html#ga641e24b0c15e7022522dab614d9a24f7">em4095_basic_write</a></div><div class="ttdeci">uint8_t em4095_basic_write(uint8_t *buf, uint16_t len)</div><div class="ttdoc">basic example write</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00265">driver_em4095_basic.c:265</a></div></div>
 <div class="ttc" id="agroup__em4095__example__driver_html_ga6eed764d3ee85bb5b30319210aa0903d"><div class="ttname"><a href="group__em4095__example__driver.html#ga6eed764d3ee85bb5b30319210aa0903d">EM4095_BASIC_DEFAULT_DIV</a></div><div class="ttdeci">#define EM4095_BASIC_DEFAULT_DIV</div><div class="ttdoc">em4095 basic example default definition</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8h_source.html#l00056">driver_em4095_basic.h:56</a></div></div>
 <div class="ttc" id="agroup__em4095__example__driver_html_ga84366c9e129f8741da8144393d60b22d"><div class="ttname"><a href="group__em4095__example__driver.html#ga84366c9e129f8741da8144393d60b22d">em4095_basic_init</a></div><div class="ttdeci">uint8_t em4095_basic_init(void(*callback)(em4095_mode_t mode, em4095_decode_t *buf, uint16_t len))</div><div class="ttdoc">basic example init</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00108">driver_em4095_basic.c:108</a></div></div>
-<div class="ttc" id="agroup__em4095__example__driver_html_ga900a43e637b7af83a7443529009525b7"><div class="ttname"><a href="group__em4095__example__driver.html#ga900a43e637b7af83a7443529009525b7">em4095_basic_deinit</a></div><div class="ttdeci">uint8_t em4095_basic_deinit(void)</div><div class="ttdoc">basic example deinit</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00300">driver_em4095_basic.c:300</a></div></div>
-<div class="ttc" id="agroup__em4095__example__driver_html_gaeb64be9ec213ff5b31a8466a91bfd4d7"><div class="ttname"><a href="group__em4095__example__driver.html#gaeb64be9ec213ff5b31a8466a91bfd4d7">em4095_basic_read</a></div><div class="ttdeci">uint8_t em4095_basic_read(uint8_t *buf, uint16_t len)</div><div class="ttdoc">basic example read</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00170">driver_em4095_basic.c:170</a></div></div>
+<div class="ttc" id="agroup__em4095__example__driver_html_ga900a43e637b7af83a7443529009525b7"><div class="ttname"><a href="group__em4095__example__driver.html#ga900a43e637b7af83a7443529009525b7">em4095_basic_deinit</a></div><div class="ttdeci">uint8_t em4095_basic_deinit(void)</div><div class="ttdoc">basic example deinit</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00322">driver_em4095_basic.c:322</a></div></div>
+<div class="ttc" id="agroup__em4095__example__driver_html_gaabe852653f71c813a61ea96b330bfec6"><div class="ttname"><a href="group__em4095__example__driver.html#gaabe852653f71c813a61ea96b330bfec6">em4095_basic_set_div</a></div><div class="ttdeci">uint8_t em4095_basic_set_div(uint32_t clock_div)</div><div class="ttdoc">basic example set clock div</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00169">driver_em4095_basic.c:169</a></div></div>
+<div class="ttc" id="agroup__em4095__example__driver_html_gaeb64be9ec213ff5b31a8466a91bfd4d7"><div class="ttname"><a href="group__em4095__example__driver.html#gaeb64be9ec213ff5b31a8466a91bfd4d7">em4095_basic_read</a></div><div class="ttdeci">uint8_t em4095_basic_read(uint8_t *buf, uint16_t len)</div><div class="ttdoc">basic example read</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__basic_8c_source.html#l00192">driver_em4095_basic.c:192</a></div></div>
 <div class="ttc" id="agroup__em4095__interface__driver_html_ga12628e5f14457d4f129a6c25913d2a55"><div class="ttname"><a href="group__em4095__interface__driver.html#ga12628e5f14457d4f129a6c25913d2a55">em4095_interface_mod_gpio_write</a></div><div class="ttdeci">uint8_t em4095_interface_mod_gpio_write(uint8_t data)</div><div class="ttdoc">interface mod gpio write</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__interface__template_8c_source.html#l00108">driver_em4095_interface_template.c:108</a></div></div>
 <div class="ttc" id="agroup__em4095__interface__driver_html_ga1ca6d2ee2246c9293fab13adb9814c85"><div class="ttname"><a href="group__em4095__interface__driver.html#ga1ca6d2ee2246c9293fab13adb9814c85">em4095_interface_demod_gpio_deinit</a></div><div class="ttdeci">uint8_t em4095_interface_demod_gpio_deinit(void)</div><div class="ttdoc">interface demod gpio deinit</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__interface__template_8c_source.html#l00132">driver_em4095_interface_template.c:132</a></div></div>
 <div class="ttc" id="agroup__em4095__interface__driver_html_ga2c40400d21d94a25b865282c9599a9ae"><div class="ttname"><a href="group__em4095__interface__driver.html#ga2c40400d21d94a25b865282c9599a9ae">em4095_interface_shd_gpio_init</a></div><div class="ttdeci">uint8_t em4095_interface_shd_gpio_init(void)</div><div class="ttdoc">interface shd gpio init</div><div class="ttdef"><b>Definition:</b> <a href="driver__em4095__interface__template_8c_source.html#l00046">driver_em4095_interface_template.c:46</a></div></div>
