@@ -6,6 +6,8 @@ Chip Name: STM32F407ZGT6.
 
 Extern Oscillator: 8MHz.
 
+UART Pin: TX/RX PA9/PA10.
+
 GPIO Pin: CLK/SHD/DEMOD_OUT/MOD PB0/PB2/PA8/PB1.
 
 ### 2. Development and Debugging
