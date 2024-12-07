@@ -153,112 +153,112 @@ typedef struct em4095_info_s
 
 /**
  * @brief     initialize em4095_handle_t structure
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] STRUCTURE is em4095_handle_t
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] STRUCTURE em4095_handle_t
  * @note      none
  */
 #define DRIVER_EM4095_LINK_INIT(HANDLE, STRUCTURE)           memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link shd_gpio_init function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a shd_gpio_init function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a shd_gpio_init function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_SHD_GPIO_INIT(HANDLE, FUC)       (HANDLE)->shd_gpio_init = FUC
 
 /**
  * @brief     link shd_gpio_deinit function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a shd_gpio_deinit function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a shd_gpio_deinit function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_SHD_GPIO_DEINIT(HANDLE, FUC)     (HANDLE)->shd_gpio_deinit = FUC
 
 /**
  * @brief     link shd_gpio_write function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a shd_gpio_write function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a shd_gpio_write function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_SHD_GPIO_WRITE(HANDLE, FUC)      (HANDLE)->shd_gpio_write = FUC
 
 /**
  * @brief     link mod_gpio_init function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a mod_gpio_init function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a mod_gpio_init function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_MOD_GPIO_INIT(HANDLE, FUC)       (HANDLE)->mod_gpio_init = FUC
 
 /**
  * @brief     link mod_gpio_deinit function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a mod_gpio_deinit function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a mod_gpio_deinit function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_MOD_GPIO_DEINIT(HANDLE, FUC)     (HANDLE)->mod_gpio_deinit = FUC
 
 /**
  * @brief     link mod_gpio_write function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a mod_gpio_write function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a mod_gpio_write function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_MOD_GPIO_WRITE(HANDLE, FUC)      (HANDLE)->mod_gpio_write = FUC
 
 /**
  * @brief     link demod_gpio_init function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a demod_gpio_init function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a demod_gpio_init function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_DEMOD_GPIO_INIT(HANDLE, FUC)     (HANDLE)->demod_gpio_init = FUC
 
 /**
  * @brief     link demod_gpio_deinit function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a demod_gpio_deinit function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a demod_gpio_deinit function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_DEMOD_GPIO_DEINIT(HANDLE, FUC)   (HANDLE)->demod_gpio_deinit = FUC
 
 /**
  * @brief     link demod_gpio_read function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a demod_gpio_read function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a demod_gpio_read function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_DEMOD_GPIO_READ(HANDLE, FUC)     (HANDLE)->demod_gpio_read = FUC
 
 /**
  * @brief     link timestamp_read function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a timestamp_read function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a timestamp_read function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_TIMESTAMP_READ(HANDLE, FUC)      (HANDLE)->timestamp_read = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_DELAY_MS(HANDLE, FUC)            (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_DEBUG_PRINT(HANDLE, FUC)         (HANDLE)->debug_print = FUC
 
 /**
  * @brief     link receive_callback function
- * @param[in] HANDLE points to an em4095 handle structure
- * @param[in] FUC points to a receive_callback function address
+ * @param[in] HANDLE pointer to an em4095 handle structure
+ * @param[in] FUC pointer to a receive_callback function address
  * @note      none
  */
 #define DRIVER_EM4095_LINK_RECEIVE_CALLBACK(HANDLE, FUC)    (HANDLE)->receive_callback = FUC
@@ -276,7 +276,7 @@ typedef struct em4095_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an em4095 info structure
+ * @param[out] *info pointer to an em4095 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -286,7 +286,7 @@ uint8_t em4095_info(em4095_info_t *info);
 
 /**
  * @brief     irq handler
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -298,7 +298,7 @@ uint8_t em4095_irq_handler(em4095_handle_t *handle);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 gpio initialization failed
@@ -310,7 +310,7 @@ uint8_t em4095_init(em4095_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 deinit failed
@@ -322,8 +322,8 @@ uint8_t em4095_deinit(em4095_handle_t *handle);
 
 /**
  * @brief     read data
- * @param[in] *handle points to an em4095 handle structure
- * @param[in] len is the read length
+ * @param[in] *handle pointer to an em4095 handle structure
+ * @param[in] len read length
  * @return    status code
  *            - 0 success
  *            - 1 read failed
@@ -336,9 +336,9 @@ uint8_t em4095_read(em4095_handle_t *handle, uint16_t len);
 
 /**
  * @brief     write data
- * @param[in] *handle points to an em4095 handle structure
- * @param[in] *buf points to a data buffer
- * @param[in] len is the write length
+ * @param[in] *handle pointer to an em4095 handle structure
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len written length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -351,9 +351,9 @@ uint8_t em4095_write(em4095_handle_t *handle, uint8_t *buf, uint16_t len);
 
 /**
  * @brief      copy decode buffer
- * @param[in]  *handle points to an em4095 handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the read length
+ * @param[in]  *handle pointer to an em4095 handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len read length
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -364,7 +364,7 @@ uint8_t em4095_copy_decode_buffer(em4095_handle_t *handle, uint8_t *buf, uint16_
 
 /**
  * @brief     power on
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 power on failed
@@ -376,7 +376,7 @@ uint8_t em4095_power_on(em4095_handle_t *handle);
 
 /**
  * @brief     power down
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 power down failed
@@ -388,8 +388,8 @@ uint8_t em4095_power_down(em4095_handle_t *handle);
 
 /**
  * @brief     set irq div
- * @param[in] *handle points to an em4095 handle structure
- * @param[in] clock_div is the set div
+ * @param[in] *handle pointer to an em4095 handle structure
+ * @param[in] clock_div clock div
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -401,8 +401,8 @@ uint8_t em4095_set_div(em4095_handle_t *handle, uint32_t clock_div);
 
 /**
  * @brief      get irq div
- * @param[in]  *handle points to an em4095 handle structure
- * @param[out] *clock_div points to a div buffer
+ * @param[in]  *handle pointer to an em4095 handle structure
+ * @param[out] *clock_div pointer to a div buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL

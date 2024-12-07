@@ -329,9 +329,9 @@ Functions</h2></td></tr>
 <p>copy decode buffer </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>points to a data buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the read length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>pointer to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>read length </td></tr>
   </table>
   </dd>
 </dl>
@@ -366,7 +366,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -412,8 +412,8 @@ Functions</h2></td></tr>
 <p>get irq div </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*clock_div</td><td>points to a div buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*clock_div</td><td>pointer to a div buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -448,7 +448,7 @@ Functions</h2></td></tr>
 <p>get chip's information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an em4095 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an em4095 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -482,7 +482,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -518,7 +518,7 @@ Functions</h2></td></tr>
 <p>irq handler </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -554,7 +554,7 @@ Functions</h2></td></tr>
 <p>power down </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -590,7 +590,7 @@ Functions</h2></td></tr>
 <p>power on </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -636,8 +636,8 @@ Functions</h2></td></tr>
 <p>read data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the read length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>read length </td></tr>
   </table>
   </dd>
 </dl>
@@ -684,8 +684,8 @@ Functions</h2></td></tr>
 <p>set irq div </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">clock_div</td><td>is the set div </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clock_div</td><td>clock div </td></tr>
   </table>
   </dd>
 </dl>
@@ -737,9 +737,9 @@ Functions</h2></td></tr>
 <p>write data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an em4095 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*buf</td><td>points to a data buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the write length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an em4095 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*buf</td><td>pointer to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>written length </td></tr>
   </table>
   </dd>
 </dl>

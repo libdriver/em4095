@@ -59,9 +59,9 @@ uint8_t em4095_read_write_test_irq_handler(void)
 
 /**
  * @brief     interface receive callback
- * @param[in] mode is the running mode
- * @param[in] *buf points to a decode buffer
- * @param[in] len is the data length
+ * @param[in] mode running mode
+ * @param[in] *buf pointer to a decode buffer
+ * @param[in] len data length
  * @note      none
  */
 static void a_receive_callback(em4095_mode_t mode, em4095_decode_t *buf, uint16_t len)
@@ -107,7 +107,7 @@ static void a_receive_callback(em4095_mode_t mode, em4095_decode_t *buf, uint16_
 
 /**
  * @brief     read write test
- * @param[in] times is the test times
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

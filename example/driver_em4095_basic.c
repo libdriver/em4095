@@ -42,9 +42,9 @@ static void (*gs_callback)(em4095_mode_t mode, em4095_decode_t *buf, uint16_t le
 
 /**
  * @brief     interface receive callback
- * @param[in] mode is the running mode
- * @param[in] *buf points to a decode buffer
- * @param[in] len is the data length
+ * @param[in] mode running mode
+ * @param[in] *buf pointer to a decode buffer
+ * @param[in] len data length
  * @note      none
  */
 static void a_receive_callback(em4095_mode_t mode, em4095_decode_t *buf, uint16_t len)
@@ -99,7 +99,7 @@ uint8_t em4095_basic_irq_handler(void)
 
 /**
  * @brief     basic example init
- * @param[in] *callback points to an irq callback address
+ * @param[in] *callback pointer to an irq callback address
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -160,7 +160,7 @@ uint8_t em4095_basic_init(void (*callback)(em4095_mode_t mode, em4095_decode_t *
 
 /**
  * @brief     basic example set clock div
- * @param[in] clock_div is the set clock div
+ * @param[in] clock_div clock div
  * @return    status code
  *            - 0 success
  *            - 1 set div failed
@@ -182,8 +182,8 @@ uint8_t em4095_basic_set_div(uint32_t clock_div)
 
 /**
  * @brief      basic example read
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the read length
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len read length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -255,8 +255,8 @@ uint8_t em4095_basic_read(uint8_t *buf, uint16_t len)
 
 /**
  * @brief     basic example write
- * @param[in] *buf points to a data buffer
- * @param[in] len is the write length
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len written length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
