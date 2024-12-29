@@ -61,7 +61,7 @@ uint8_t em4095_read_write_test_irq_handler(void);
 
 /**
  * @brief     read write test
- * @param[in] times is the test times
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

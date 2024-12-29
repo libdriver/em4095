@@ -50,7 +50,7 @@
 
 /**
  * @brief     em4095 get diff time
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @note      none
  */
 static void a_em4095_time_diff(em4095_handle_t *handle)
@@ -73,7 +73,7 @@ static void a_em4095_time_diff(em4095_handle_t *handle)
 
 /**
  * @brief     read sync
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -129,7 +129,7 @@ static uint8_t a_read_sync(em4095_handle_t *handle)
 
 /**
  * @brief     write sync
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 2 not sync
@@ -152,7 +152,7 @@ static uint8_t a_write_sync(em4095_handle_t *handle)
 
 /**
  * @brief     irq handler
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -285,7 +285,7 @@ uint8_t em4095_irq_handler(em4095_handle_t *handle)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 gpio initialization failed
@@ -439,7 +439,7 @@ uint8_t em4095_init(em4095_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 deinit failed
@@ -495,7 +495,7 @@ uint8_t em4095_deinit(em4095_handle_t *handle)
 
 /**
  * @brief     power down
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 power down failed
@@ -529,7 +529,7 @@ uint8_t em4095_power_down(em4095_handle_t *handle)
 
 /**
  * @brief     power on
- * @param[in] *handle points to an em4095 handle structure
+ * @param[in] *handle pointer to an em4095 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 power on failed
@@ -563,8 +563,8 @@ uint8_t em4095_power_on(em4095_handle_t *handle)
 
 /**
  * @brief     set irq div
- * @param[in] *handle points to an em4095 handle structure
- * @param[in] clock_div is the set div
+ * @param[in] *handle pointer to an em4095 handle structure
+ * @param[in] clock_div clock div
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -596,8 +596,8 @@ uint8_t em4095_set_div(em4095_handle_t *handle, uint32_t clock_div)
 
 /**
  * @brief      get irq div
- * @param[in]  *handle points to an em4095 handle structure
- * @param[out] *clock_div points to a div buffer
+ * @param[in]  *handle pointer to an em4095 handle structure
+ * @param[out] *clock_div pointer to a div buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -622,8 +622,8 @@ uint8_t em4095_get_div(em4095_handle_t *handle, uint32_t *clock_div)
 
 /**
  * @brief     read data
- * @param[in] *handle points to an em4095 handle structure
- * @param[in] len is the read length
+ * @param[in] *handle pointer to an em4095 handle structure
+ * @param[in] len read length
  * @return    status code
  *            - 0 success
  *            - 1 read failed
@@ -688,9 +688,9 @@ uint8_t em4095_read(em4095_handle_t *handle, uint16_t len)
 
 /**
  * @brief     write data
- * @param[in] *handle points to an em4095 handle structure
- * @param[in] *buf points to a data buffer
- * @param[in] len is the write length
+ * @param[in] *handle pointer to an em4095 handle structure
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len written length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -754,9 +754,9 @@ uint8_t em4095_write(em4095_handle_t *handle, uint8_t *buf, uint16_t len)
 
 /**
  * @brief      copy decode buffer
- * @param[in]  *handle points to an em4095 handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the read length
+ * @param[in]  *handle pointer to an em4095 handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len read length
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -787,7 +787,7 @@ uint8_t em4095_copy_decode_buffer(em4095_handle_t *handle, uint8_t *buf, uint16_
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an em4095 info structure
+ * @param[out] *info pointer to an em4095 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL

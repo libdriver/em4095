@@ -70,7 +70,7 @@ uint8_t em4095_interface_shd_gpio_deinit(void);
 
 /**
  * @brief     interface shd gpio write
- * @param[in] data is the set level
+ * @param[in] data set level
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -98,7 +98,7 @@ uint8_t em4095_interface_mod_gpio_deinit(void);
 
 /**
  * @brief     interface mod gpio write
- * @param[in] data is the set level
+ * @param[in] data set level
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -126,7 +126,7 @@ uint8_t em4095_interface_demod_gpio_deinit(void);
 
 /**
  * @brief      interface demod gpio read
- * @param[out] *data points to a data level buffer
+ * @param[out] *data pointer to a data level buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -136,7 +136,7 @@ uint8_t em4095_interface_demod_gpio_read(uint8_t *data);
 
 /**
  * @brief     interface timestamp read
- * @param[in] *t points to an em4095_time structure
+ * @param[in] *t pointer to an em4095_time structure
  * @return    status code
  *            - 0 success
  *            - 1 read failed
@@ -146,23 +146,23 @@ uint8_t em4095_interface_timestamp_read(em4095_time_t *t);
 
 /**
  * @brief     interface delay ms
- * @param[in] ms
+ * @param[in] ms time
  * @note      none
  */
 void em4095_interface_delay_ms(uint32_t ms);
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 void em4095_interface_debug_print(const char *const fmt, ...);
 
 /**
  * @brief     interface receive callback
- * @param[in] mode is the running mode
- * @param[in] *buf points to a decode buffer
- * @param[in] len is the data length
+ * @param[in] mode running mode
+ * @param[in] *buf pointer to a decode buffer
+ * @param[in] len data length
  * @note      none
  */
 void em4095_interface_receive_callback(em4095_mode_t mode, em4095_decode_t *buf, uint16_t len);

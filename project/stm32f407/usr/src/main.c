@@ -66,7 +66,7 @@ void EXTI0_IRQHandler(void)
 
 /**
  * @brief     gpio exti callback
- * @param[in] pin is the gpio pin
+ * @param[in] pin gpio pin
  * @note      none
  */
 void HAL_GPIO_EXTI_Callback(uint16_t pin)
@@ -83,9 +83,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin)
 
 /**
  * @brief     interface receive callback
- * @param[in] mode is the running mode
- * @param[in] *buf points to a decode buffer
- * @param[in] len is the data length
+ * @param[in] mode running mode
+ * @param[in] *buf pointer to a decode buffer
+ * @param[in] len data length
  * @note      none
  */
 static void a_receive_callback(em4095_mode_t mode, em4095_decode_t *buf, uint16_t len)
@@ -115,8 +115,8 @@ static void a_receive_callback(em4095_mode_t mode, em4095_decode_t *buf, uint16_
 
 /**
  * @brief     em4095 full function
- * @param[in] argc is arg numbers
- * @param[in] **argv is the arg address
+ * @param[in] argc arg numbers
+ * @param[in] **argv arg address
  * @return    status code
  *            - 0 success
  *            - 1 run failed

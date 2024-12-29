@@ -66,7 +66,7 @@ uint8_t em4095_basic_irq_handler(void);
 
 /**
  * @brief     basic example init
- * @param[in] *callback points to an irq callback address
+ * @param[in] *callback pointer to an irq callback address
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -85,8 +85,8 @@ uint8_t em4095_basic_deinit(void);
 
 /**
  * @brief      basic example read
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the read length
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len read length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -96,8 +96,8 @@ uint8_t em4095_basic_read(uint8_t *buf, uint16_t len);
 
 /**
  * @brief     basic example write
- * @param[in] *buf points to a data buffer
- * @param[in] len is the write length
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len written length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -107,7 +107,7 @@ uint8_t em4095_basic_write(uint8_t *buf, uint16_t len);
 
 /**
  * @brief     basic example set clock div
- * @param[in] clock_div is the set clock div
+ * @param[in] clock_div clock div
  * @return    status code
  *            - 0 success
  *            - 1 set div failed
