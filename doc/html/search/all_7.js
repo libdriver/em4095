@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['s_105',['s',['../structem4095__time__s.html#a963840de6724d0090ffb30f4b6e6f8fc',1,'em4095_time_s']]],
-  ['shd_5fgpio_5fdeinit_106',['shd_gpio_deinit',['../structem4095__handle__s.html#a8df0c7c3d004acc57cf520c6276d4410',1,'em4095_handle_s']]],
-  ['shd_5fgpio_5finit_107',['shd_gpio_init',['../structem4095__handle__s.html#a174063288a43786b40eaeb76db5313fd',1,'em4095_handle_s']]],
-  ['shd_5fgpio_5fwrite_108',['shd_gpio_write',['../structem4095__handle__s.html#a90b570fc746272afb8493fff4befdcd8',1,'em4095_handle_s']]],
-  ['start_5fflag_109',['start_flag',['../structem4095__handle__s.html#af26731ad2b39b91b386db80610dccab5',1,'em4095_handle_s']]],
-  ['supply_5fvoltage_5fmax_110',['SUPPLY_VOLTAGE_MAX',['../driver__em4095_8c.html#a68eba8b601afe11f1b871d944976c035',1,'driver_em4095.c']]],
-  ['supply_5fvoltage_5fmax_5fv_111',['supply_voltage_max_v',['../structem4095__info__s.html#a3d2b12bcac7a85ea8646bff9debe8660',1,'em4095_info_s']]],
-  ['supply_5fvoltage_5fmin_112',['SUPPLY_VOLTAGE_MIN',['../driver__em4095_8c.html#aac8d8cbd899667d609787ef4cf37054d',1,'driver_em4095.c']]],
-  ['supply_5fvoltage_5fmin_5fv_113',['supply_voltage_min_v',['../structem4095__info__s.html#ad8bde6ddadaf43d951e62f3befb9d35a',1,'em4095_info_s']]]
+  ['mainpage_2eh_0',['mainpage.h',['../mainpage_8h.html',1,'']]],
+  ['manufacturer_5fname_1',['MANUFACTURER_NAME',['../driver__em4095_8c.html#aaa2b8f5b105c3019df0cb346f472e803',1,'driver_em4095.c']]],
+  ['manufacturer_5fname_2',['manufacturer_name',['../structem4095__info__s.html#ad25285dbf810c90f8eaf3fcef6f2b2ea',1,'em4095_info_s']]],
+  ['max_5fcurrent_3',['MAX_CURRENT',['../driver__em4095_8c.html#a2989837a37d6d63b59c6dd541b785435',1,'driver_em4095.c']]],
+  ['max_5fcurrent_5fma_4',['max_current_ma',['../structem4095__info__s.html#a9db82802561bf22d799b03a345f1d1dc',1,'em4095_info_s']]],
+  ['mod_5fgpio_5fdeinit_5',['mod_gpio_deinit',['../structem4095__handle__s.html#aecef6a59f810f0310e61ebcea7025299',1,'em4095_handle_s']]],
+  ['mod_5fgpio_5finit_6',['mod_gpio_init',['../structem4095__handle__s.html#af99aa353df343b366324f246d2ca0d85',1,'em4095_handle_s']]],
+  ['mod_5fgpio_5fwrite_7',['mod_gpio_write',['../structem4095__handle__s.html#ad98a3bff463e6ccc367123acf5060698',1,'em4095_handle_s']]],
+  ['mode_8',['mode',['../structem4095__handle__s.html#a37e90f5e3bd99fac2021fb3a326607d4',1,'em4095_handle_s']]]
 ];

@@ -474,9 +474,9 @@ uint8_t em4095(uint8_t argc, char **argv)
         em4095_interface_debug_print("                                 Run the driver example.\n");
         em4095_interface_debug_print("  -h, --help                     Show the help.\n");
         em4095_interface_debug_print("  -i, --information              Show the chip information.\n");
-        em4095_interface_debug_print("      --length=<len>             Set the read length.\n");
+        em4095_interface_debug_print("      --length=<len>             Set the read length.([default: 256])\n");
         em4095_interface_debug_print("  -p, --port                     Display the pin connections of the current board.\n");
-        em4095_interface_debug_print("  -t <read>, --test=<read>       Run the driver test.([default: 128])\n");
+        em4095_interface_debug_print("  -t <read>, --test=<read>       Run the driver test.\n");
         em4095_interface_debug_print("      --times=<num>              Set the running times.([default: 3])\n");
 
         return 0;
