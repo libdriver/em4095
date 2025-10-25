@@ -165,8 +165,8 @@ Options:
                                  Run the driver example.
   -h, --help                     Show the help.
   -i, --information              Show the chip information.
-      --length=<len>             Set the read length.
+      --length=<len>             Set the read length.([default: 256])
   -p, --port                     Display the pin connections of the current board.
-  -t <read>, --test=<read>       Run the driver test.([default: 128])
+  -t <read>, --test=<read>       Run the driver test.
       --times=<num>              Set the running times.([default: 3])
 ```

@@ -13,7 +13,7 @@ The EM4095 (previously named P4095) chip is a CMOS integrated transceiver circui
 - AM modulation of the field for writable transponder.
 - AM demodulation of the antenna signal modulation induced by the transponder communicate with a microprocessor via simple interface.
 
-LibDriver EM4095 is a full-featured driver of EM4095 launched by LibDriver.It provides the function of RF reading, RF writing and other functions. LibDriver is MISRA compliant.
+LibDriver EM4095 is a full-featured driver for EM4095, launched by LibDriver.It provides RF reading, RF writing and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
